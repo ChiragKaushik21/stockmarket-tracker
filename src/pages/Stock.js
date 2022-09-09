@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Plot from 'react-plotly.js';
-import { API_CLIENT } from '../shared/services/API_CLIENT';
+import { API_CLIENT } from '../services/API_CLIENT';
 import StockTable from '../components/StockTable';
 
 const Stock = () => {

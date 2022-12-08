@@ -6,7 +6,6 @@ const StockTable = ({date, open, close, volume}) => {
         <td>{date}</td>
         <td>{open}</td>
         <td>{close}</td>
-        <td>{volume}</td>
     </tr>
 </>)    
 }

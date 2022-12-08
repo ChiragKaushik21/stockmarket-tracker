@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StockTable = ({date, open, close, volume}) => {
+const StockTable = ({date, open, close}) => {
   return (<>
     <tr>
         <td>{date}</td>

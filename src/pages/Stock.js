@@ -8,7 +8,7 @@ const Stock = () => {
   const [yStockChart, setyStockChart] = useState([]);
   const [search, setSearch] = useState("")
   const [closeData, setCloseData] = useState([]);
-  const [volumeData, setVolume] = useState([]);
+  
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Stock = () => {
     const stockChartXValueFunction = [];
     const stockChartYValueFunction = [];
     const stockCloseData = [];
-    const stockVolume = [];
+   
 
     const URL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${search}&outputsize=compact&apikey=${API_key}`
     const promise = API_CLIENT.get(URL)
@@ -27,13 +27,13 @@ const Stock = () => {
         stockChartYValueFunction.push(result.data['Time Series (Daily)']
         [key]['1. open'])
         stockCloseData.push(result.data['Time Series (Daily)'][key]['4. close'])
-        stockVolume.push(result.data['Time Series (Daily)'][key]['5. volume'])
+        
       }
 
       setxStockChart(stockChartXValueFunction)
       setyStockChart(stockChartYValueFunction)
       setCloseData(stockCloseData)
-      setVolume(stockVolume)
+      
     })
       .catch(err => {
         console.log(err)

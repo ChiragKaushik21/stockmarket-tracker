@@ -12,7 +12,7 @@ const Stock = () => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    const API_key = 'C6NRAXXHBJ5G396B';
+    const API_key = 'EPZ6JQRQL4V872OR';
     const stockChartXValueFunction = [];
     const stockChartYValueFunction = [];
     const stockCloseData = [];

@@ -12,13 +12,14 @@ const Stock = () => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    const API_key = 'A5383HUKTJVPPP4H';
+    const API_key = 'C6NRAXXHBJ5G396B';
     const stockChartXValueFunction = [];
     const stockChartYValueFunction = [];
     const stockCloseData = [];
    
 
-    const URL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${search}&outputsize=compact&apikey=${API_key}`
+    const URL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${search}&outputsize=full&apikey=${API_key}`
+    
     const promise = API_CLIENT.get(URL)
     promise.then(result => {
       console.log(result.data)
